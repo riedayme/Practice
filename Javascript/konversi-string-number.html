@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	// masalah tanpa konversi
+	const value1 = "1"; // string
+	const value2 = 1; // number
+	const sum = value1 + value2; // string (11)
+	document.writeln(`<p>${sum}</p>`);
+
+	/*
+	parseInt			| string ke number (bulat)
+	parseFloat 			| string ke number (pecahan)
+	Number 				| string ke number (bulat / pecahan)
+	number.toString()	| number ke string
+	*/
+
+	const sumfix = parseInt(value1) + value2;
+	document.writeln(`<p>${sumfix}</p>`);
+
+	// other example
+	document.writeln(`<p>${parseInt("1.1")}</p>`);
+	document.writeln(`<p>${parseFloat("1.1")}</p>`);
+	document.writeln(`<p>${Number("1.1")}</p>`);
+
+	const v1 = 1;
+	const v2 = 2;
+	document.writeln(`<p>${v1.toString()+v2.toString()}</p>`);	
+
+	// NaN (not a number)
+	// konversi data yang tidak valid
+	document.writeln(`<p>${Number("123asique")}</p>`); // will return NaN
+	document.writeln(`<p>${parseInt("123asique")}</p>`); // will return 123 because it will tolerance 
+	document.writeln(`<p>${parseFloat("123.1asique")}</p>`); // will return 123.1
+
+	// isNaN() | check jika data berupa NaN -> return boolean
+	const v3 = Number("1234a")	
+	document.writeln(`<p>${isNaN(v3)}</p>`); // will return true
+
+
+
+</script>
+
+</body>
+</html>

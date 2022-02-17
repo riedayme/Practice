@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+
+	// with for
+	function factorial(value)
+	{
+		let result = 1;
+		for(let i = 1; i <= value; i++) {
+			result *= i;
+		}
+
+		return result;
+	}
+
+	console.info(factorial(5));
+
+	// with recursive function
+	function factorialRecursive(value)
+	{ 
+		if (value === 1) {
+			return 1;
+		}
+		else {
+			return value * factorialRecursive(value - 1);
+		}
+	}
+
+	console.info(factorialRecursive(5));
+
+	// recursing = memanggil functionnya sendiri sampai kondisi tertentu
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		let arraykosong = [];
+
+		let acikiwir = ["dilan","ngopi","jaktim"];
+
+		console.table(acikiwir);
+
+	// push | menambah array 
+	acikiwir.push("mantap");
+	acikiwir.push("sekali", "muehehe");
+
+	console.table(acikiwir);
+
+	// fungsi di array
+	/*
+	array.push				| menambahkan array
+	array.length			| mengihitung total array
+	array[index]			| mendapatkan data pada posisi index
+	array[index] = value	| mengubah data pada posisi index
+	delete array[index]		| menghapus array pada posisi index (data hilang namun index array lainnya tetap)
+	*/
+
+	console.info(acikiwir.length);
+	console.info(`${acikiwir[0]}`);
+
+	acikiwir[0] = "dilandidi";
+	console.info(`${acikiwir[0]}`);	
+
+	// delete index 0
+	delete acikiwir[0];
+	console.table(acikiwir); // index 0 will remove, and index keep in the position 
+
+	// add again index 0
+	acikiwir[0] = "hahai";
+	console.table(acikiwir);
+
+	acikiwir.push("hehe",["awwe","Awwi","Awwa"]);
+
+	console.table(acikiwir);
+
+
+</script>
+
+</body>
+</html>

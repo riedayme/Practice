@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+	class User{
+		constructor(username)
+		{
+			this.username = username;
+		}
+
+		backlist()
+		{
+			return "think broken";
+		}
+	}
+
+	class Login extends User{
+
+		constructor(username,password)
+		{
+			// super constructor call
+			super(username);
+			this.password = password;
+		}
+
+		check()
+		{
+			// super in method
+			console.info(super.backlist());
+			if (this.username == 'habib' && this.password == 'bahar') {
+				console.info(`habib found`)
+			}else{
+				console.info(`habib not found`)
+			}
+		}
+	}
+
+	const lo = new Login("habib","bahar");
+	console.info(lo);
+
+	lo.check();
+	</script>
+
+</body>
+</html>

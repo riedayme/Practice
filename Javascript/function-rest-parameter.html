@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function cihuyDo(first, ...data){
+			return `${first} ${data.length}`;
+		}	
+
+		console.info(cihuyDo('count all data',1,2,3,4,5,6));
+
+		// spread syntax
+		// data array untuk rest parameter
+		let data = [1,2,3,4,5,6,7,8,9,10];
+		console.info(cihuyDo('count all data',...data));
+	</script>
+
+</body>
+</html>

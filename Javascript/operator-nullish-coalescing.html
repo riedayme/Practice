@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	/*
+	nullish value adalah null dan undefined
+	mirip dengan operator-ternary namun menggunakan operator (??) 
+	*/
+
+	// cara biasa
+	let parameter; 
+	let data = parameter;
+	if (data === null || data === undefined) {
+		data = "set data";
+	}
+
+	console.info(data);
+
+	// menggunakan nullish coalescing
+	data = parameter ?? "acikiwir nullish";
+
+	console.info(data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+		function me(name)
+		{
+			return name;
+		}
+
+		function who(callback){
+			console.info(callback('acikiwir'));
+		}
+
+		let mycodi = who; // set function who to mycodi
+
+		mycodi(me); // send function me to function who
+		who(me); //same using function master
+	</script>
+
+</body>
+</html>

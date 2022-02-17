@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		/*
+		arrow function tidak bisa mengguakan
+		this (will return window bukan ke object)
+		arguments
+		super		
+		*/
+		const piw = {
+			nama: "awwaw",
+			create: (mes) => {
+				console.info(this); // return window
+				console.info(mes);
+			}
+		}
+
+		piw.create('loaded by arrow function in object');
+	</script>
+
+</body>
+</html>

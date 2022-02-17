@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	/**
+	debugger tersedia dibrowser
+	digunakan untuk mengetahui alur kode
+	*/
+
+	function create(first,middle,last)
+	{
+		debugger; // call debugger
+		const full = `${first} ${middle} ${last}`;
+		return full;
+	}
+
+	const add = create("saya","super","man");
+
+	console.info(add);
+
+
+	// kasus 2
+	function sam(...num){
+		debugger;
+		let total = 0;
+		for(const suw of num)
+		{
+			total += suw;
+		}
+
+		return total;
+	}
+
+	console.info(sam(1,1,1,1,1))
+</script>
+
+</body>
+</html>

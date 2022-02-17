@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	class Registration{
+		constructor(username, password)
+		{
+			this.username = username;
+			this.password = password;
+		}
+
+		get register()
+		{
+			return `has regsiterd as ${this.username} and password is ${this.password}`;
+		}
+
+		set register(value)
+		{
+			let explode = value.split(",");
+			this.username = explode[0];
+			this.password = explode[1];
+		}
+	}
+
+	const lo = new Registration("habib","bahar");
+	console.info(lo.register);
+
+	// set
+	lo.register = "rizki,123";
+
+	// get
+	console.info(lo.register);
+	</script>
+
+</body>
+</html>

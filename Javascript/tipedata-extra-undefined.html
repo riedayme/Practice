@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	// undefined data yang belum didefinisikan nilainya
+
+	let name; // this undefined
+	// let name = "yes"; // this defined
+	if (name == undefined) {
+		console.info('name not defined');
+	}else{
+		console.info('name defined')
+	}
+
+	// undefined di array
+	let awuu = [1,2,3];
+	if (awuu[3] == undefined) {
+		console.info("array not defined");
+	}else {
+		console.info("array defined");
+	}
+
+	// undefined di object
+	let awe = {};
+	if (awe.name == undefined) {
+		console.info("object not defined");
+	}else {
+		console.info("object defined " + `${awe.name}`);
+	}
+</script>
+
+</body>
+</html>

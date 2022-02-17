@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+/*
+data dianggap falsy
+false
+0
+-0
+""
+''
+``
+null
+undefined
+NaN
+
+selain data diatas maka akan dianggap true	
+*/
+
+// contoh
+let ts1 = false;
+let ts2 = 0;
+let ts3 = -0;
+let ts4 = "";
+let ts5 = '';
+let ts6 = ``;
+let ts7 = null;
+let ts8 = undefined;
+let ts9 = NaN;
+
+if (ts1 || ts2 || ts3 || ts4 || ts5 || ts6 || ts7 || ts8 || ts9) {
+	console.log("another data have truthy");
+}else{
+	console.log("all data is falsy");
+}
+
+</script>
+
+</body>
+</html>

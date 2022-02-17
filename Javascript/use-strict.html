@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	/**
+	'use strict'
+	digunakan untuk mengamankan kode dari kode yang sudah tidak relevan 
+	dan menjelaskan error lebih detail
+	*/
+
+	// strict on function
+	function strict()
+	{
+		'use strict'
+		
+		const pow = {
+			first:"a",
+			middle:"b",
+			last:"c"
+		};
+
+		// error in 'use strict'
+		with(pow){
+			console.info(first);
+			console.info(middle);
+			console.info(last);
+		}
+		// Uncaught SyntaxError: Strict mode code may not include a with statement
+	}
+
+	strict();
+</script>
+
+</body>
+</html>

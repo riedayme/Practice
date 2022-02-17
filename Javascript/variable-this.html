@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	// global this
+	console.info(this); // return window
+
+	// function this
+	function wrapper(){
+		console.info(this);
+
+		function inner(){
+			console.info(this);
+		}
+
+		inner();
+	}
+
+	wrapper(); // return window
+
+	const puww = {
+		dollar: "$",
+		count: 1000,
+		create: function(mes){
+			console.info(`create ${this.dollar}${this.count} by ${mes}`);
+		}
+	}
+
+	puww.create("jiwww");
+</script>
+
+</body>
+</html>

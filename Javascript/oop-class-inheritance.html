@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+	class Database {
+		user()
+		{
+			let user = "bahar";
+			return user;
+		}
+	}
+
+	class Login extends Database{
+		check(username)
+		{
+			if (this.user() == username) {
+				console.info("user found");
+			}else{
+				console.info("user not found");				
+			}
+		}
+	}
+
+	const lo = new Login();
+	console.info(lo);
+
+	lo.check("bahar");
+	</script>
+
+</body>
+</html>

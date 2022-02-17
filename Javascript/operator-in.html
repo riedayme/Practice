@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	// in only check key not value
+
+	// in array
+	let person = [null,"aladin",undefined];
+	if ("0" in person) {
+		console.info(`exist ${person[0]}`);
+	}
+
+	// in object
+	let pew = {
+		pangeran: "abu",
+		babu: "aladin",
+		impostor: "mack"
+	};
+	if ("pangeran" in pew) {
+		console.info(`exist ${pew.pangeran}`);
+	}
+</script>
+
+</body>
+</html>

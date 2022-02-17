@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function Empoloy(name)
+		{
+			this.name = name;
+		}
+
+		function Manager(name)
+		{
+			this.name = name;
+		}
+
+		// error inheritance
+		// Manager.prototype = Empoloy.prototype;
+
+		// benar 
+		Manager.prototype = Object.create(Empoloy.prototype);
+
+		Manager.prototype.sayhow = function(name)
+		{
+			console.info(`how ${name} manager`);
+		}
+
+		Empoloy.prototype.sayhow = function(name)
+		{
+			console.info(`how ${name} employ`);
+		}
+
+		const employe = new Empoloy("budi");
+		employe.sayhow("asique");
+
+		const managed = new Manager("bossman");
+		managed.sayhow("mantap");
+
+		console.info(employe);
+		console.info(managed);
+	</script>
+
+</body>
+</html>

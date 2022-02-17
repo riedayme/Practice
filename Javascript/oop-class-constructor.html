@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	class Login{
+		constructor(username)
+		{
+			this.username = username;
+		}
+
+		check()
+		{
+			if (this.username == 'habib') {
+				console.info(`habib found`)
+			}else{
+				console.info(`habib not found`)
+			}
+		}
+	}
+
+	const lo = new Login("habib");
+	console.info(lo);
+
+	lo.check();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+function read(text){
+	// console.log(text);
+	if (text == undefined) {
+		throw new Error("text belum di isi");
+	}
+
+	return document.writeln(text);
+}
+
+read(); // will error and stop program
+read("hello dolly");
+</script>
+
+</body>
+</html>

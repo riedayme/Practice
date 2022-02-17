@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	function createwiw(value){
+		const owner = "acikiwir";
+
+		function add(param){
+			console.info(owner);
+			return value + param;
+		}
+
+		return add;
+	}
+
+	let addwiw = createwiw(5);
+
+	console.info(addwiw(10));
+	console.info(addwiw(25));
+
+	let addwaw = createwiw(10);
+	console.info(addwaw(30));
+</script>
+
+</body>
+</html>

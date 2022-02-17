@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	class Login{
+		static username = "habib";
+		static password = "bahar";
+
+		process()
+		{
+			return this.username;
+		}
+
+		process2()
+		{
+			// access static field in method
+			return Login.username;
+		}
+	}
+
+	// access static field
+	console.info(Login.username);
+	console.info(Login.password);	
+
+	const lo = new Login();
+	console.info(lo.process()); // undefined result
+	console.info(lo.process2()); // habib result	
+	</script>
+
+</body>
+</html>

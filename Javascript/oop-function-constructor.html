@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function AcikiwirMue(name,age){
+			this.setname = name;
+			this.setage = age;
+			this.generate = function(){
+				console.info(`hello ${this.setname} you age is ${this.setage}`);
+			}
+		};
+
+		const sim = new AcikiwirMue("jaja",30);
+		sim.generate();
+
+
+		const som = new AcikiwirMue("Awu",25);	
+		som.generate();
+
+		console.info(sim);
+		console.info(som);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+// tanpa with
+const piw = {
+	ase: "awu",
+	asb: "awiw",
+	asd: "awow"
+};
+
+console.info(piw.ase);
+console.info(piw.asb);
+console.info(piw.asd);
+
+// dengan with
+with(piw){
+	console.info(ase);
+	console.info(asb);
+	console.info(asd);
+}
+
+// with statment tidak direkomendasikan karena diblokir di javascript modern
+</script>
+
+</body>
+</html>

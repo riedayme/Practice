@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function* generate()
+		{
+			yield "awwe";
+			yield "Awwi";
+			yield "zzu";
+		}	
+
+		// result generator
+		console.info(generate());
+
+		// literation
+		let gen = generate();
+		for(const r of gen) {
+			console.info(r);
+		}
+
+		// kompleks
+		function* genji(value){
+			for(let i = 1; i <= value; i++)
+			{
+				if (i % 2 === 1) {					
+					yield i;
+				}
+			}
+		}
+
+		const ger = genji(10);
+		console.info(ger.next().value);
+		console.info(ger.next().value);
+		console.info(ger.next().value);					
+		// for(const ra of ger)
+		// {
+		// 	console.info(ra);	
+		// }
+	</script>
+
+</body>
+</html>

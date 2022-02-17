@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+	class Login{
+
+		// aadd # for private method
+		#process()
+		{
+			return `success`;
+		}
+
+		getprocess()
+		{
+			return this.#process();
+		}
+	}
+
+	const lo = new Login();
+	console.info(lo);
+
+	// will success
+	console.info(lo.getprocess());
+
+	// will error
+	console.info(lo.#process);
+	</script>
+
+</body>
+</html>

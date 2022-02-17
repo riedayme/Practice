@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+	// getter
+	const pawe = {
+		firstnamu: "awe",
+		lastname: "acikiwiw",
+		get fullname(){
+			return `${this.firstnamu} ${this.lastname}`;
+		},
+		set fullname(val){
+			const asique = val.split(" ");
+			this.firstnamu = asique[0];
+			this.lastname = asique[1];
+		}
+	}
+
+	console.table(pawe);
+
+	pawe.fullname = "asique cikiwir";
+	console.table(pawe);
+</script>
+
+</body>
+</html>

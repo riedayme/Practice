@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+		function checkDolly(data) {
+			if (data === 'dolly') {
+				return true;
+			}
+			return false;
+		}
+
+		function returnDolly()
+		{
+			return ["dolly","has","found"]; // return array
+		}
+
+		function isDolly(data){
+			if (checkDolly(data)) {
+				return returnDolly();
+			}
+
+			return false; // return boolean
+		}	
+
+		console.info(isDolly('dolly'));
+	</script>
+
+</body>
+</html>

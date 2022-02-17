@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+// global scope
+let counter = 0;
+
+function hit()
+{
+	// local scope
+	let awiw;
+	console.info(awiw);
+
+	// get global scope
+	counter++;
+}
+
+hit();
+hit();
+
+// global scope bisa diakses dari mana saja 
+console.info(counter);
+
+// lokal skope hanya bisa diakses didalam area function
+console.info(awiw); // error
+
+// nested function scope
+function wrapper()
+{
+	let awis = "waw";
+
+	function des() {
+		let awus = "wiw";
+		console.info(awis); // success
+	}
+
+	des(); 
+
+	console.info(awuw); // error
+
+}
+
+wrapper();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function Toko1(omset){
+			this.omset = omset;
+			this.zz = omset;
+		}
+
+		function Toko2(awe, laba){
+			Toko1.call(this, awe);
+			this.laba = laba;
+		}
+
+		const toko = new Toko2(10000,5000);
+		console.info(toko);
+
+	</script>
+
+</body>
+</html>

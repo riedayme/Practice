@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+class ErrorLogin extends Error{
+	constructor(message,field)
+	{
+		// send parameter to class Error
+		super(message);
+		this.field = field;
+	}
+}
+
+class Login {
+	Process(u,p){
+		if (u == undefined && p == undefined) {
+			throw new ErrorLogin("username or password is empty", "line 21");
+		}
+
+		return u + p;
+	}
+}
+
+const lo = new Login();
+
+try{
+	lo.Process(); // will error
+} catch(error){
+	if (error instanceof ErrorLogin) {
+		console.info(`error in field ${error.field} as ${error.message}`);
+	}else {
+		console.info(error.message);
+	}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		console.info("============ array");
+	// array
+	{
+		// cara biasa mengakses array
+		const awiw = ["aku","super","man","tak","terkalahkan"];
+		console.info(awiw[0]);
+		console.info(awiw[1]);
+		console.info(awiw[2]);
+
+		// menggunaakn destructuring
+		const [aci,kiwi,errr, ...other] = awiw;
+		console.info(aci);	
+		console.info(kiwi);	
+		console.info(errr);	
+		// ...other = untuk menampung data lainnya yang tidak dibaca kedalam array
+		console.table(other);
+	}
+
+	console.info("============ object");
+	// object
+	{
+		// cara biasa mengakses object
+		const awuw = {
+			a1: 1,
+			a2: {
+				a2a: "2A",
+				a2b: "2B"
+			},
+			a3: 3,
+			a4: 4,
+			a5: 5
+		};
+
+		console.info(awuw.a1);
+		console.info(awuw.a2);
+		console.info(awuw.a3);
+
+		// menggunakan destructuring
+		const {a1,a2:{a2a,a2b},a3,...other} = awuw;
+
+		console.info(a1);
+		console.info(a2a);
+		console.info(a2b);		
+		console.info(a3);	
+		
+		// ...other = untuk menampung data lainnya yang tidak dibaca kedalam object
+		console.table(other);			
+	}
+
+	console.info("============ function");
+	// function
+	{
+		// destructuring object on parameter
+		function diss({nama,pekerjaan,gaji}) 
+		{
+			console.info(nama);
+			console.info(pekerjaan);
+			console.info(gaji);
+		}
+
+		const employ = {
+			nama:"rick",
+			pekerjaan:"investor",
+			gaji:1000000000
+		};
+
+		diss(employ);
+
+
+		// destructuring array on parameter
+		function duww([asique,baww])
+		{
+			console.info(`${asique} ${baww}`);
+		}
+
+		const amploy = ["saya" ,"man"];
+
+		duww(amploy);
+	}
+
+	console.info("============ default value");
+	// set default value
+	{
+
+		// array
+		const name = ["saya", "super"];
+		const [s,a,y = "man"] = name;
+
+		console.info(s);
+		console.info(a);
+		console.info(y);
+
+		// object
+		const awuw = {
+			a1: 1,
+			a5: 5
+		};
+
+		const {a1,a5,a6 = "wiw"} = awuw;
+
+		console.info(a1);
+		console.info(a5);
+		console.info(a6);
+	}
+
+	console.info("============ rewrite name");
+	// set default value
+	{
+		const dar = {
+			first: "awuw",
+			middle: "awiw",
+			last: "awew",
+		};
+
+		const {first:a,middle:b,last:c} = dar;
+
+		// call with new name
+		console.info(a);
+		console.info(b);
+		console.info(c);
+	}	
+
+</script>
+
+</body>
+</html>

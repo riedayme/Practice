@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<script>
+	// var tidak terikat dengan lokal scope jadi tidak disarankan untuk digunakan lagi
+
+	// menggunakan let
+	let i = 20; // global scope
+
+	for(let i = 0; i < 10; i++)
+	{
+		//local scope
+		console.info(`local ${i}`); // 0-9
+	}
+
+	console.info(`global ${i}`); // 20
+	// let support scope jadi tidak terjadi penggantian data 
+	// antara scope global dengan scope lokal
+
+	console.info(`var `);
+
+	// menggunakan var
+	var w = 20; // global scope
+
+	for(var w = 0; w < 10; w++)
+	{
+		//local scope
+		console.info(`local ${w}`); // 0-9
+	}
+
+	console.info(`global ${w}`); // 10
+
+	// var tidak support scope jadi akan menimpa data sebelumnya 
+	// yaitu scope global 20 dan scope local 0
+	// menjadi 0 karena scope global akan digantikan oleh scope yang ditulis selanjutnya dilokal dan sebaliknya.
+</script>
+
+</body>
+</html>
